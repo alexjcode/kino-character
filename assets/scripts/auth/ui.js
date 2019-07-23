@@ -34,6 +34,7 @@ const signInSuccessful = responseData => {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#sign-out').show()
+  $('#character-list').show()
   $('#change-password').show()
   $('#new-kino').show()
   $('#load-kino').show()

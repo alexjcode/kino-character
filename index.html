@@ -41,14 +41,34 @@
 
         <div id="kino-menu" class="col">
           <form id="create-character" class="btn-pad row">
-            <button class="btn btn-primary btn-block">Add Character</button>
+            <h4 class="col">Add Character</h4>
+            <input class="form-control" required type="text" placeholder="First Name" name="kinos[first]">
+            <input class="form-control" required type="text" placeholder="Last Name" name="kinos[last]">
+            <input class="form-control" required type="text" placeholder="Born (YYYY)" name="kinos[born]">
+            <input class="form-control" required type="text" placeholder="Location" name="kinos[location]">
+            <input class="form-control" required type="text" placeholder="Movie" name="kinos[movie]">
+            <input class="form-control" required type="text" placeholder="Likes" name="kinos[likes]">
+            <input class="form-control" required type="text" placeholder="Image URL" name="kinos[img]">
+            <button class="btn btn-primary btn-block">Submit</button>
           </form>
-          <form id="index-character" class="btn-pad row">
+          <!-- <form id="index-character" class="btn-pad row">
             <button class="btn btn-primary btn-block">All Characters</button>
-          </form>
+          </form> -->
           <form id="show-character" class="btn-pad row">
             <h4 class="col">Show Character</h4>
-            <input class="form-control" required type="number" placeholder="Enter Kino ID Here" name="kinos[id]">
+            <input class="form-control" required type="number" placeholder="Enter Character ID Here" name="kinos[id]">
+            <button class="btn btn-primary btn-block">Submit</button>
+          </form>
+          <form id="update-character" class="btn-pad row">
+            <h4 class="col">Update Character</h4>
+            <input class="form-control" required type="number" placeholder="Enter Character ID Here" name="kinos[id]">
+            <input class="form-control" required type="text" placeholder="First Name" name="kinos[first]">
+            <input class="form-control" required type="text" placeholder="Last Name" name="kinos[last]">
+            <input class="form-control" required type="text" placeholder="Born (YYYY)" name="kinos[born]">
+            <input class="form-control" required type="text" placeholder="Location" name="kinos[location]">
+            <input class="form-control" required type="text" placeholder="Movie" name="kinos[movie]">
+            <input class="form-control" required type="text" placeholder="Likes" name="kinos[likes]">
+            <input class="form-control" required type="text" placeholder="Image URL" name="kinos[img]">
             <button class="btn btn-primary btn-block">Submit</button>
           </form>
           <form id="change-password" class="btn-pad row">

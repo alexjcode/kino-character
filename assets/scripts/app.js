@@ -13,10 +13,11 @@ const authEvents = require('./auth/events')
 
 $(() => {
   $('#character-list').hide()
+  $('#create-character').hide()
+  $('#show-character').hide()
   $('#kino-divider').hide()
   $('#change-password').hide()
   $('#sign-out').hide()
-  $('#current-turn').hide()
   $('#new-kino').hide()
   $('#load-kino').hide()
   $('#index-kino').hide()
