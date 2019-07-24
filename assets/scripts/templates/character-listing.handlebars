@@ -1,0 +1,19 @@
+{{#each characters as |character|}}
+  <!-- log character -->
+  <section data-id="{{character.id}}">
+    <h6>Title:</h6>
+    <h3>
+      {{limit character.name 15}}
+    </h2>
+    <h6>Author:</h6>
+    <p>
+      {{#if character.movie}}
+        {{character.movie}}
+      {{else}}
+        Unkown movie
+      {{/if}}
+    </p>
+    <button class="btn btn-danger delete-character" data-id="{{character.id}}">Remove</button>
+  </section>
+
+{{/each}}

@@ -31,6 +31,7 @@ const signInSuccessful = responseData => {
   // store user token
   store.user = responseData.user
   successMessage(`You signed in successfully!`)
+
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#sign-out').show()
@@ -40,11 +41,8 @@ const signInSuccessful = responseData => {
   $('#create-character').show()
   $('#show-character').show()
   $('#update-character').show()
-  $('#kino-divider').show()
 
-  $('#new-kino').hide()
-  $('#load-kino').hide()
-  $('#index-kino').hide()
+  $('#kino-divider').show()
 }
 
 const signInFailure = () => {
@@ -61,6 +59,7 @@ const changePasswordFailure = () => {
 
 const signOutSuccessful = () => {
   successMessage('Signed out successfully!')
+
   $('#sign-up').show()
   $('#sign-in').show()
   $('#change-password').hide()
@@ -71,10 +70,7 @@ const signOutSuccessful = () => {
   $('#update-character').hide()
   $('#show-character').hide()
 
-  $('#new-kino').hide()
-  $('#load-kino').hide()
   $('#kino-divider').hide()
-  $('#index-kino').hide()
 }
 
 const signOutFailure = () => {

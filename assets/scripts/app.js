@@ -7,32 +7,30 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
-// const kinoEvents = require('./kino/events')
+const kinoEvents = require('./kino/events')
 // const multiClick = 'ontouchstart' in window ? 'touchstart' : 'click'
 // const store = require('./store.js')
 
 $(() => {
   $('#character-list').hide()
   $('#create-character').hide()
+  $('#index-character').hide()
   $('#show-character').hide()
   $('#update-character').hide()
+
   $('#kino-divider').hide()
   $('#change-password').hide()
   $('#sign-out').hide()
-  $('#new-kino').hide()
-  $('#load-kino').hide()
-  $('#index-kino').hide()
-})
 
-$(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
-  // $('#new-kino').on('submit', kinoEvents.onNewKino)
-  // if (!store.over) {
-  //   $(`div[data-cell-index]`).on(multiClick, kinoEvents.onNewMove)
-  // }
-  // $('#load-kino').on('submit', kinoEvents.onLoadKino)
-  // $('#index-kino').on('submit', kinoEvents.onIndexKino)
+
+  $('#create-character').on('submit', kinoEvents.onCreateCharacter)
+  $('#index-character').on('submit', kinoEvents.onIndexCharacters)
+  $('#show-character').on('submit', kinoEvents.onShowCharacter)
+  $('#update-character').on('submit', kinoEvents.onUpdateCharacter)
+
+  kinoEvents.addHandlers()
 })
