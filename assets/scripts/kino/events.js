@@ -16,6 +16,15 @@ const onIndexCharacters = (event) => {
     .catch(ui.failure)
 }
 
+const onShowCharacter = (event) => {
+  event.preventDefault()
+  console.log('event', event)
+  // debugger
+  api.indexCharacters()
+    .then(ui.showCharacterSuccess)
+    .catch(ui.failure)
+}
+
 const onClearCharacters = (event) => {
   event.preventDefault()
   ui.clearCharacters()
@@ -54,6 +63,7 @@ const onDeleteCharacter = (event) => {
 
 const addHandlers = () => {
   $('#indexCharactersButton').on('click', onIndexCharacters)
+  $('#show-character').on('Search', onShowCharacter)
   $('#clearCharactersButton').on('click', onClearCharacters)
   $('body').on('click', '.delete-book', onDeleteCharacter)
 }
@@ -112,6 +122,7 @@ const btnHandlers = () => {
 module.exports = {
   onCreateCharacter,
   onUpdateCharacter,
+  onShowCharacter,
   addHandlers,
   btnHandlers
 }

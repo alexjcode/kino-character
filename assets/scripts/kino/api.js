@@ -38,7 +38,7 @@ const indexCharacters = () => {
 const showCharacter = (data) => {
   // console.log(data)
   return $.ajax({
-    url: config.apiUrl + '/characters/' + data.kinos.id,
+    url: config.apiUrl + '/characters/' + data.characters.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token

@@ -29,7 +29,7 @@ $(() => {
 
   $('#create-character').on('submit', kinoEvents.onCreateCharacter)
   $('#index-character').on('submit', kinoEvents.onIndexCharacters)
-  $('#show-character').on('submit', kinoEvents.onShowCharacter)
+  $('#show-character').on('Search', kinoEvents.onShowCharacter)
   $('#update-character').on('submit', kinoEvents.onUpdateCharacter)
 
   kinoEvents.addHandlers()

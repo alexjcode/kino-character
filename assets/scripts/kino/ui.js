@@ -29,6 +29,12 @@ const indexCharactersSuccess = (data) => {
   $('.content').html(showCharHtml) // html() or append()
 }
 
+const showCharacterSuccess = (data) => {
+  // console.log(data)
+  const showCharHtml = showCharTemplate({ characters: data.characters })
+  $('.content').html(showCharHtml) // html() or append()
+}
+
 // const deleteBookSuccess = (data) => {
 //   // debugger
 //   console.log(data)
@@ -145,6 +151,7 @@ module.exports = {
   failMessage,
   successMessage,
   indexCharactersSuccess,
+  showCharacterSuccess,
   clearCharacters,
   failure
   // newKinoSuccess,

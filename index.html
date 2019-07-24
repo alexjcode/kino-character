@@ -25,9 +25,9 @@
             <div class="col-auto">
               <form id="show-characters" class="form-inline">
                 <div class="form">
-                  <input class="form-control" required type="number" placeholder="Character ID" name="kinos[id]">
+                  <input class="form-control" required type="number" placeholder="Character ID" name="characters[id]">
                 </div>
-                <button class="btn btn-primary">Search</button>
+                <button id="showCharacterButton" class="btn btn-primary">Search</button>
               </form>
             </div>
           </div>
@@ -56,13 +56,13 @@
         <div id="kino-menu" class="col">
           <form id="create-character" class="btn-pad row">
             <h4 class="col">Add Character</h4>
-            <input class="form-control" required type="text" placeholder="First Name" name="kinos[first]">
-            <input class="form-control" required type="text" placeholder="Last Name" name="kinos[last]">
-            <input class="form-control" required type="text" placeholder="Born (YYYY)" name="kinos[born]">
-            <input class="form-control" required type="text" placeholder="Location" name="kinos[location]">
-            <input class="form-control" required type="text" placeholder="Movie" name="kinos[movie]">
-            <input class="form-control" required type="text" placeholder="Likes" name="kinos[likes]">
-            <input class="form-control" required type="text" placeholder="Image URL" name="kinos[img]">
+            <input class="form-control" required type="text" placeholder="First Name" name="characters[first_name]">
+            <input class="form-control" required type="text" placeholder="Last Name" name="characters[last_name]">
+            <input class="form-control" required type="text" placeholder="Born (YYYY)" name="characters[born_on]">
+            <input class="form-control" required type="text" placeholder="Location" name="characters[location]">
+            <input class="form-control" required type="text" placeholder="Movie" name="characters[movie]">
+            <input class="form-control" required type="text" placeholder="Likes" name="characters[likes]">
+            <input class="form-control" required type="text" placeholder="Image URL" name="characters[img]">
             <button class="btn btn-primary btn-block">Submit</button>
           </form>
           <!-- <form id="index-character" class="btn-pad row">
@@ -70,14 +70,14 @@
           </form> -->
           <form id="update-character" class="btn-pad row">
             <h4 class="col">Update Character</h4>
-            <input class="form-control" required type="number" placeholder="Enter Character ID Here" name="kinos[id]">
-            <input class="form-control" required type="text" placeholder="First Name" name="kinos[first]">
-            <input class="form-control" required type="text" placeholder="Last Name" name="kinos[last]">
-            <input class="form-control" required type="text" placeholder="Born (YYYY)" name="kinos[born]">
-            <input class="form-control" required type="text" placeholder="Location" name="kinos[location]">
-            <input class="form-control" required type="text" placeholder="Movie" name="kinos[movie]">
-            <input class="form-control" required type="text" placeholder="Likes" name="kinos[likes]">
-            <input class="form-control" required type="text" placeholder="Image URL" name="kinos[img]">
+            <input class="form-control" required type="number" placeholder="Enter Character ID Here" name="characters[id]">
+            <input class="form-control" required type="text" placeholder="First Name" name="characters[first_name]">
+            <input class="form-control" required type="text" placeholder="Last Name" name="characters[last_name]">
+            <input class="form-control" required type="text" placeholder="Born (YYYY)" name="characters[born_on]">
+            <input class="form-control" required type="text" placeholder="Location" name="characters[location]">
+            <input class="form-control" required type="text" placeholder="Movie" name="characters[movie]">
+            <input class="form-control" required type="text" placeholder="Likes" name="characters[likes]">
+            <input class="form-control" required type="text" placeholder="Image URL" name="characters[img]">
             <button class="btn btn-primary btn-block">Submit</button>
           </form>
         </div>
