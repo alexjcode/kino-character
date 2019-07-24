@@ -42,16 +42,6 @@ const failure = (error) => {
   console.error(error)
 }
 
-// const indexKinoSuccess = (res) => {
-//   res
-//   $('#message').text(`${xIndex} Wins, ${oIndex} Losses, ${drawsIndex} Draws [ ${totalKinosIndex} Total Kinos ]`)
-// }
-//
-// const indexKinoFailure = (error) => {
-//   console.log(`Index failure`, error)
-//   failMessage(`Index failure`)
-// }
-//
 // const newKinoSuccess = (responseData) => {
 //   store.kino = responseData.kino
 //   $('#character-list').show()

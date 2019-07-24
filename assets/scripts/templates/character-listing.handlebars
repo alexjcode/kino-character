@@ -1,19 +1,45 @@
 {{#each characters as |character|}}
   <!-- log character -->
-  <section data-id="{{character.id}}">
-    <h6>Title:</h6>
-    <h3>
-      {{limit character.name 15}}
-    </h2>
-    <h6>Author:</h6>
-    <p>
-      {{#if character.movie}}
-        {{character.movie}}
-      {{else}}
-        Unkown movie
-      {{/if}}
-    </p>
-    <button class="btn btn-danger delete-character" data-id="{{character.id}}">Remove</button>
-  </section>
+  <div class="row" data-id="{{character.id}}">
+    <div class="img img-c col-auto">
+      <img src="{{character.img}}" width="100%">
+    </div>
+    <div class="col-auto">
+      <h3>
+        {{limit character.name 18}}
+      </h3>
+      <p>
+        {{#if character.movie}}
+          {{character.movie}}
+        {{else}}
+          Unknown Film
+        {{/if}}
+      </p>
+    </div>
+    <div class="col-auto">
+      <p>
+        {{#if character.location}}
+          Location: {{character.location}}
+        {{else}}
+          Location: YYYY
+        {{/if}}
+        <br />
+        {{#if character.born_on}}
+          Born: {{character.born_on}}
+        {{else}}
+          Born: YYYY
+        {{/if}}
+        <br />
+        {{#if character.likes}}
+          Likes: {{character.likes}}
+        {{else}}
+          Likes: Unknown
+        {{/if}}
+      </p>
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-danger delete-character" data-id="{{character.id}}">Remove</button>
+    </div>
+  </div>
 
 {{/each}}

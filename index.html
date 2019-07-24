@@ -9,12 +9,37 @@
     </head>
     <body class="container">
       <nav>
-      <div class="app-name">Kino Character</div>
-      <div class="nav-buttons">
-        <button id="indexCharactersButton" class="btn btn-info mr-2">Index Characters</button>
-        <button id="clearCharactersButton" class="btn btn-outline-info">Clear</button>
-      </div>
-    </nav>
+        <h1 class="app-name">Kino Character</h1>
+        <div class="nav-buttons row justify-content-center">
+          <div class="form-row row justify-content-center m-2">
+            <div class="col-auto">
+              <button id="indexCharactersButton" class="btn btn-primary">Index Characters</button>
+            </div>
+          </div>
+          <div class="form-row row justify-content-center m-2">
+            <div class="col-auto">
+              <button id="clearCharactersButton" class="btn btn-primary">Clear</button>
+            </div>
+          </div>
+          <div class="form-row row justify-content-center m-2">
+            <div class="col-auto">
+              <form id="show-characters" class="form-inline">
+                <div class="form">
+                  <input class="form-control" required type="number" placeholder="Character ID" name="kinos[id]">
+                </div>
+                <button class="btn btn-primary">Search</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- <form id="show-character" class="form-inline">
+            <div class="form-group btn">
+              <input type="email" class="form-control" id="email">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </form> -->
+        </div>
+      </nav>
 
       <!-- // Status Messages // -->
 
@@ -26,15 +51,6 @@
 
       <div class="row kino">
         <div id="character-list" class="character-list container col-lg-8 content">
-          <div class="row">
-            #
-          </div>
-          <div class="row">
-            #
-          </div>
-          <div class="row">
-            #
-          </div>
         </div>
 
         <!-- // GAME END // -->
@@ -58,11 +74,6 @@
           <!-- <form id="index-character" class="btn-pad row">
             <button class="btn btn-primary btn-block">All Characters</button>
           </form> -->
-          <form id="show-character" class="btn-pad row">
-            <h4 class="col">Show Character</h4>
-            <input class="form-control" required type="number" placeholder="Enter Character ID Here" name="kinos[id]">
-            <button class="btn btn-primary btn-block">Submit</button>
-          </form>
           <form id="update-character" class="btn-pad row">
             <h4 class="col">Update Character</h4>
             <input class="form-control" required type="number" placeholder="Enter Character ID Here" name="kinos[id]">
