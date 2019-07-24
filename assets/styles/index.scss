@@ -26,6 +26,7 @@ $primary: #ff1493;
 }
 
 .container {
+  padding: 0;
   text-align: center;
 }
 
@@ -35,17 +36,22 @@ h1, h2, h3, h4 {
 }
 
 .kino {
-  // height: 40%;
-  padding: 20px;
-  margin: 20px;
+  padding: 15px;
+  // margin: 20px;
 }
 
 .img-c {
   display: block;
-  max-width: 90%;
-  max-height: 90%;
-  margin: auto;
+  width: 90%;
+  // height: 100px;
+  padding: 5px 0 5px 0;
   vertical-align: middle;
+}
+
+.item-div {
+  padding: 0;
+  overflow: hidden;
+  justify-content: center;
 }
 
 .x {
@@ -54,6 +60,17 @@ h1, h2, h3, h4 {
 
 .kino-divider {
   height: 45px;
+}
+
+.char-item {
+  // color: white;
+  border: solid #000 7px;
+  margin: 0 0 10px 0;
+  height: 100px;
+}
+
+p {
+  font-size: 14px;
 }
 
 // .btn {

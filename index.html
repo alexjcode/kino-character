@@ -10,18 +10,18 @@
     <body class="container">
       <nav>
         <h1 class="app-name">Kino Character</h1>
-        <div class="nav-buttons row justify-content-center">
-          <div class="form-row row justify-content-center m-2">
+        <div class="nav-buttons form-row justify-content-center">
+          <div class="form-row row justify-content-center m-1 mt-3">
             <div class="col-auto">
               <button id="indexCharactersButton" class="btn btn-primary">Index Characters</button>
             </div>
           </div>
-          <div class="form-row row justify-content-center m-2">
+          <div class="form-row row justify-content-center m-1 mt-3">
             <div class="col-auto">
               <button id="clearCharactersButton" class="btn btn-primary">Clear</button>
             </div>
           </div>
-          <div class="form-row row justify-content-center m-2">
+          <div class="form-row row justify-content-center m-1 mt-3">
             <div class="col-auto">
               <form id="show-characters" class="form-inline">
                 <div class="form">
@@ -32,25 +32,19 @@
             </div>
           </div>
 
-          <!-- <form id="show-character" class="form-inline">
-            <div class="form-group btn">
-              <input type="email" class="form-control" id="email">
-              <button type="submit" class="btn btn-default">Submit</button>
-            </div>
-          </form> -->
         </div>
       </nav>
 
       <!-- // Status Messages // -->
 
       <section>
-        <h3 id="message"></h3>
+        <h3 id="message" class="mt-4 mb-4"></h3>
       </section>
 
       <!-- // GAME START // -->
 
-      <div class="row kino">
-        <div id="character-list" class="character-list container col-lg-8 content">
+      <div class="row kino mt-2">
+        <div id="character-list" class="container col-lg-8 content">
         </div>
 
         <!-- // GAME END // -->
@@ -86,17 +80,22 @@
             <input class="form-control" required type="text" placeholder="Image URL" name="kinos[img]">
             <button class="btn btn-primary btn-block">Submit</button>
           </form>
-          <form id="change-password" class="btn-pad row">
-            <h4 class="col">Change Password</h4>
-            <input class="form-control" type="password" name="passwords[old]" placeholder="Don't Use Ye Olde 123!!!">
-            <input class="form-control" type="password" name="passwords[new]" placeholder="Don't Use Ye Neue 1234!!!!">
-            <button class="btn btn-primary btn-block">Change Password</button>
-          </form>
-          <form id="sign-out" class="btn-pad row">
-            <button class="btn btn-primary btn-block">Sign Out</button>
-          </form>
         </div>
+      </div>
 
+      <div class="col">
+        <form id="change-password" class="btn-pad row">
+          <h4 class="col">Change Password</h4>
+          <input class="form-control" type="password" name="passwords[old]" placeholder="Don't Use Ye Olde 123!!!">
+          <input class="form-control" type="password" name="passwords[new]" placeholder="Don't Use Ye Neue 1234!!!!">
+          <button class="btn btn-primary btn-block">Change Password</button>
+        </form>
+      </div>
+
+      <div class="col">
+        <form id="sign-out" class="btn-pad row">
+          <button class="btn btn-primary btn-block">Sign Out</button>
+        </form>
       </div>
 
       <div class="col">

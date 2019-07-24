@@ -1,10 +1,10 @@
 {{#each characters as |character|}}
   <!-- log character -->
-  <div class="row" data-id="{{character.id}}">
-    <div class="img img-c col-auto">
-      <img src="{{character.img}}" width="100%">
+  <div class="char-item row pd-15" data-id="{{character.id}}">
+    <div class="col-2 item-div">
+      <img cleas="img-c" src="{{character.img}}" height="86px">
     </div>
-    <div class="col-auto">
+    <div class="col-5 item-div">
       <h3>
         {{limit character.name 18}}
       </h3>
@@ -16,7 +16,7 @@
         {{/if}}
       </p>
     </div>
-    <div class="col-auto">
+    <div class="col-4 item-div">
       <p>
         {{#if character.location}}
           Location: {{character.location}}
@@ -37,8 +37,8 @@
         {{/if}}
       </p>
     </div>
-    <div class="col-auto">
-      <button class="btn btn-danger delete-character" data-id="{{character.id}}">Remove</button>
+    <div class="col-1 item-div">
+      <button class="btn btn-danger delete-character" data-id="{{character.id}}">X</button>
     </div>
   </div>
 
