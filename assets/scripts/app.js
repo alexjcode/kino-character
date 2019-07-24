@@ -15,6 +15,7 @@ $(() => {
   $('#character-list').hide()
   $('#create-character').hide()
   $('#show-character').hide()
+  $('#update-character').hide()
   $('#kino-divider').hide()
   $('#change-password').hide()
   $('#sign-out').hide()

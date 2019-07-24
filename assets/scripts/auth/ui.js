@@ -34,11 +34,17 @@ const signInSuccessful = responseData => {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#sign-out').show()
-  $('#character-list').show()
   $('#change-password').show()
-  $('#new-kino').show()
-  $('#load-kino').show()
-  $('#index-kino').show()
+
+  $('#character-list').show()
+  $('#create-character').show()
+  $('#show-character').show()
+  $('#update-character').show()
+  $('#kino-divider').show()
+
+  $('#new-kino').hide()
+  $('#load-kino').hide()
+  $('#index-kino').hide()
 }
 
 const signInFailure = () => {
@@ -54,15 +60,17 @@ const changePasswordFailure = () => {
 }
 
 const signOutSuccessful = () => {
-  $('#scorekeeper').text('')
-  $('#scorekeeper2').text('')
   successMessage('Signed out successfully!')
   $('#sign-up').show()
   $('#sign-in').show()
   $('#change-password').hide()
   $('#sign-out').hide()
+
+  $('#create-character').hide()
   $('#character-list').hide()
-  $('#current-turn').hide()
+  $('#update-character').hide()
+  $('#show-character').hide()
+
   $('#new-kino').hide()
   $('#load-kino').hide()
   $('#kino-divider').hide()
