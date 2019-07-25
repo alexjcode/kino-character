@@ -1,13 +1,15 @@
 {{#each characters as |character|}}
   <!-- log character -->
   <div class="char-item row pd-15" data-id="{{character.id}}">
-    <div class="col-2 item-div">
+    <div class="col-3 char-img item-div">
       <!-- need if / else img url validator here -->
-      <img cleas="img-c" src="{{character.img}}" height="86px">
+      <img class="img-c cover" src="{{character.img}}">
     </div>
-    <div class="col-5 item-div">
+    <div class="col-4 char-head item-div">
       <h3>
-        {{limit character.name 18}}
+        {{limit character.first_name 9}}
+        <br />
+        {{limit character.last_name 9}}
       </h3>
       <p>
         {{#if character.movie}}
@@ -17,7 +19,7 @@
         {{/if}}
       </p>
     </div>
-    <div class="col-4 item-div">
+    <div class="col-4 char-sub item-div">
       <p>
         {{#if character.location}}
           Location: {{character.location}}
@@ -46,7 +48,7 @@
       </p>
     </div>
     <div class="col-1 item-div">
-      <button class="btn btn-danger delete-character" data-id="{{character.id}}">X</button>
+      <button class="btn btn-light delete-character" data-id="{{character.id}}">X</button>
     </div>
   </div>
 

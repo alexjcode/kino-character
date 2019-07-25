@@ -79,6 +79,7 @@ const signOutSuccessful = () => {
 
 const signOutFailure = () => {
   failMessage('Sign out failure')
+  $('.content').empty()
 }
 
 module.exports = {
