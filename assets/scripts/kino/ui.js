@@ -25,6 +25,7 @@ const showCharTemplate = require('../templates/character-listing.handlebars')
 
 const indexCharactersSuccess = (data) => {
   // console.log(data)
+  $('form').trigger('reset')
   const showCharHtml = showCharTemplate({ characters: data.characters })
   $('.content').html(showCharHtml) // html() or append()
 }

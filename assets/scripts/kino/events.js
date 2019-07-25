@@ -45,8 +45,10 @@ const onCreateCharacter = (event) => {
   const formData = getFormFields(form)
   console.log(formData, 'formData')
   api.createCharacter(formData)
-    .then(ui.createCharacterSuccess)
-    .catch(ui.createCharacterFailure)
+    .then(() => {
+      onIndexCharacters()
+    })
+    .catch(ui.failure)
 }
 
 // const onUpdateCharacter = (event) => {
