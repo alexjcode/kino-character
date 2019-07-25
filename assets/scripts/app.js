@@ -14,23 +14,27 @@ const kinoEvents = require('./kino/events')
 $(() => {
   $('#character-list').hide()
   $('#create-character').hide()
-  $('#index-character').hide()
+  // $('#index-characters').hide()
   $('#show-character').hide()
+  $('#indexCharactersButton').hide()
+  $('#clearCharactersButton').hide()
   $('#update-character').hide()
 
   $('#kino-divider').hide()
   $('#change-password').hide()
   $('#sign-out').hide()
 
+  // kinoEvents.addHandlers()
+
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
 
-  $('#create-character').on('submit', kinoEvents.onCreateCharacter)
-  $('#index-character').on('submit', kinoEvents.onIndexCharacters)
-  $('#show-character').on('Search', kinoEvents.onShowCharacter)
-  $('#update-character').on('submit', kinoEvents.onUpdateCharacter)
+  $('#indexCharactersButton').on('click', kinoEvents.onIndexCharacters)
+  $('#clearCharactersButton').on('click', kinoEvents.onClearCharacters)
+  $('#show-character').on('submit', kinoEvents.onShowCharacter)
 
-  kinoEvents.addHandlers()
+  // $('#create-character').on('submit', kinoEvents.onCreateCharacter)
+  // $('#update-character').on('submit', kinoEvents.onUpdateCharacter)
 })

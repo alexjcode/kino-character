@@ -37,6 +37,8 @@ const signInSuccessful = responseData => {
   $('#sign-out').show()
   $('#change-password').show()
 
+  $('#indexCharactersButton').show()
+  $('#clearCharactersButton').show()
   $('#character-list').show()
   $('#create-character').show()
   $('#show-character').show()
@@ -65,6 +67,8 @@ const signOutSuccessful = () => {
   $('#change-password').hide()
   $('#sign-out').hide()
 
+  $('#indexCharactersButton').hide()
+  $('#clearCharactersButton').hide()
   $('#create-character').hide()
   $('#character-list').hide()
   $('#update-character').hide()

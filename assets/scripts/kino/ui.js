@@ -30,8 +30,8 @@ const indexCharactersSuccess = (data) => {
 }
 
 const showCharacterSuccess = (data) => {
-  // console.log(data)
-  const showCharHtml = showCharTemplate({ characters: data.characters })
+  console.log(data, 'response data')
+  const showCharHtml = showCharTemplate({ characters: data })
   $('.content').html(showCharHtml) // html() or append()
 }
 
@@ -45,6 +45,7 @@ const clearCharacters = () => {
 }
 
 const failure = (error) => {
+  // debugger
   console.error(error)
 }
 
