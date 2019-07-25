@@ -24,7 +24,7 @@ $(() => {
   $('#change-password').hide()
   $('#sign-out').hide()
 
-  // kinoEvents.addHandlers()
+  kinoEvents.addHandlers()
 
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
@@ -35,6 +35,7 @@ $(() => {
   $('#clearCharactersButton').on('click', kinoEvents.onClearCharacters)
   $('#show-character').on('submit', kinoEvents.onShowCharacter)
 
-  // $('#create-character').on('submit', kinoEvents.onCreateCharacter)
+  $('#create-character').on('submit', kinoEvents.onCreateCharacter)
+
   // $('#update-character').on('submit', kinoEvents.onUpdateCharacter)
 })

@@ -3,16 +3,16 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
-// const createCharacter = (data) => {
-//   return $.ajax({
-//     url: config.apiUrl + '/characters',
-//     data: data,
-//     method: 'POST',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const createCharacter = (data) => {
+  return $.ajax({
+    url: config.apiUrl + '/characters',
+    data: data,
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 // const updateCharacter = (data) => {
 //   return $.ajax({
@@ -47,21 +47,21 @@ const showCharacter = (data) => {
   })
 }
 
-// const deleteCharacter = (data) => {
-//   // console.log(data)
-//   return $.ajax({
-//     url: config.apiUrl + '/characters/' + data.characters.id,
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const deleteCharacter = (data) => {
+  // console.log(data)
+  return $.ajax({
+    url: config.apiUrl + '/characters/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
-  // createCharacter,
+  createCharacter,
   // updateCharacter,
   indexCharacters,
-  showCharacter
-  // deleteCharacter
+  showCharacter,
+  deleteCharacter
 }
