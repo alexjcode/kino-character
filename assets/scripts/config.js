@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'http://kino-character-rails-api.herokuapp.com',
+  production: 'https://kino-character-rails-api.herokuapp.com',
   development: 'http://localhost:4741'
 }
 
