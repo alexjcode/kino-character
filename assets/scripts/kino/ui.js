@@ -1,11 +1,5 @@
 'use strict'
 
-// auto-hide kino board
-
-// const store = require('../store.js')
-// const win = require('./win')
-// const events = require('./events')
-
 const successMessage = message => {
   $('#message').text(message)
   $('#message').removeClass('failure')
@@ -40,8 +34,6 @@ const showCharacterSuccess = (data) => {
 const createCharacterSuccess = (data) => {
   $('form').trigger('reset')
   console.log(data, 'response data')
-  // const showCharHtml = showCharTemplate({ characters: data })
-  // $('.content').html(showCharHtml) // html() or append()
 }
 
 // const deleteBookSuccess = (data) => {

@@ -14,16 +14,16 @@ const createCharacter = (data) => {
   })
 }
 
-// const updateCharacter = (data) => {
-//   return $.ajax({
-//     url: config.apiUrl + '/characters/' + store.kino.id,
-//     data: data,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const updateCharacter = (data) => {
+  return $.ajax({
+    url: config.apiUrl + '/characters/' + data.character.id,
+    data: data,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 const indexCharacters = () => {
   return $.ajax({
@@ -60,7 +60,7 @@ const deleteCharacter = (data) => {
 
 module.exports = {
   createCharacter,
-  // updateCharacter,
+  updateCharacter,
   indexCharacters,
   showCharacter,
   deleteCharacter

@@ -51,19 +51,20 @@ const onCreateCharacter = (event) => {
     .catch(ui.failure)
 }
 
-// const onUpdateCharacter = (event) => {
-//   event.preventDefault()
-//   const form = event.target
-//   const formData = getFormFields(form)
-//   api.updateCharacter(formData)
-//     .then(ui.updateCharacterSuccess)
-//     .catch(ui.updateCharacterFailure)
-// }
+const onUpdateCharacter = (event) => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  api.updateCharacter(formData)
+    .then(() => {
+      onIndexCharacters()
+    })
+    .catch(ui.failure)
+}
 
 const onDeleteCharacter = (event) => {
   event.preventDefault()
   const id = $(event.target).data('id')
-  // const id = parseInt(event.target.getAttribute('data-id'))
   onClearCharacters()
   api.deleteCharacter(id)
     .then(() => {
@@ -75,22 +76,14 @@ const onDeleteCharacter = (event) => {
 // ////////////////////////////////////////////////////////////////////////////
 
 const addHandlers = () => {
-  // $('#indexCharactersButton').on('click', onIndexCharacters)
-  // $('#show-character').on('Search', onShowCharacter)
-
   $('body').on('click', '.delete-character', onDeleteCharacter)
-}
-
-const btnHandlers = () => {
-  // $('.btn-danger').on('click', onDeleteCharacter)
 }
 
 module.exports = {
   onCreateCharacter,
-  // onUpdateCharacter,
+  onUpdateCharacter,
   onIndexCharacters,
   onClearCharacters,
   onShowCharacter,
-  addHandlers,
-  btnHandlers
+  addHandlers
 }

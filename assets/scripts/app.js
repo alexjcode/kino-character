@@ -34,8 +34,7 @@ $(() => {
   $('#indexCharactersButton').on('click', kinoEvents.onIndexCharacters)
   $('#clearCharactersButton').on('click', kinoEvents.onClearCharacters)
   $('#show-character').on('submit', kinoEvents.onShowCharacter)
-
   $('#create-character').on('submit', kinoEvents.onCreateCharacter)
 
-  // $('#update-character').on('submit', kinoEvents.onUpdateCharacter)
+  $('#update-character').on('submit', kinoEvents.onUpdateCharacter)
 })
