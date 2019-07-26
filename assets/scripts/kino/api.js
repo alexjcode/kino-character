@@ -36,7 +36,7 @@ const indexCharacters = () => {
 }
 
 const showCharacter = (data) => {
-  console.log(data.characters.id)
+  // console.log(data.characters.id)
   // debugger
   return $.ajax({
     url: config.apiUrl + '/characters/' + data.characters.id,

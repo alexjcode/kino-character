@@ -11,7 +11,7 @@ const onIndexCharacters = (event) => {
   if (event) {
     event.preventDefault()
   }
-  console.log('event', event)
+  // console.log('event', event)
   // debugger
   api.indexCharacters()
     .then(ui.indexCharactersSuccess)
@@ -19,15 +19,15 @@ const onIndexCharacters = (event) => {
 }
 
 const onShowCharacter = (event) => {
-  console.log('here')
+  // console.log('here')
   event.preventDefault()
   // debugger
 
-  console.log('event', event)
+  // console.log('event', event)
   const form = event.target
   const formData = getFormFields(form)
   // debugger
-  console.log(formData)
+  // console.log(formData)
   onClearCharacters()
   api.showCharacter(formData)
     .then(ui.showCharacterSuccess)
@@ -43,7 +43,7 @@ const onCreateCharacter = (event) => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData, 'formData')
+  // console.log(formData, 'formData')
   api.createCharacter(formData)
     .then(() => {
       onIndexCharacters()

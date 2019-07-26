@@ -3,7 +3,8 @@
   <div class="char-item row pd-15" data-id="{{character.id}}">
     <div class="col-3 char-img item-div">
       <!-- need if / else img url validator here -->
-      <img class="img-c cover" src="{{character.img}}">
+      <img class="img-c cover" src="{{character.img_working}}">
+      <span><strong>{{character.id}}</strong></span>
     </div>
     <div class="col-4 char-head item-div">
       <h3>
@@ -38,17 +39,11 @@
         {{else}}
           Likes: Unknown
         {{/if}}
-        <br />
-        {{#if character.id}}
-          [ {{character.id}} ]
-        {{else}}
-          [ ? ]
-        {{/if}}
-
       </p>
     </div>
-    <div class="col-1 item-div">
-      <button class="btn btn-light delete-character" data-id="{{character.id}}">X</button>
+    <div class="col-1 item-div item-delete" data-id="{{character.id}}">
+      <!-- <p class="x delete-character" data-id="{{character.id}}">X</p> -->
+      <button class="btn btn-dark delete-character" data-id="{{character.id}}">X</button>
     </div>
   </div>
 

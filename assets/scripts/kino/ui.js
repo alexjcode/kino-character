@@ -27,14 +27,14 @@ const indexCharactersSuccess = (data) => {
 
 const showCharacterSuccess = (data) => {
   $('form').trigger('reset')
-  console.log(data, 'response data')
+  // console.log(data, 'response data')
   const showCharHtml = showCharTemplate({ characters: data })
   $('.content').html(showCharHtml) // html() or append()
 }
 
 const createCharacterSuccess = (data) => {
   $('form').trigger('reset')
-  console.log(data, 'response data')
+  // console.log(data, 'response data')
 }
 
 // const deleteBookSuccess = (data) => {
