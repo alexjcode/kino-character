@@ -18,6 +18,30 @@ const onIndexCharacters = (event) => {
     .catch(ui.failure)
 }
 
+const onEditButton = (event) => {
+  event.preventDefault()
+  let button = $(event.target)
+  if (button.attr('class') === 'btn-txt') {
+    // debugger
+    button = button.parent()
+  }
+  const char = button.parent()
+
+  const id = button.data('id')
+  const form = $('#update-character').children()
+  form.eq(1).val(id)
+  form.eq(2).val(char.attr('first_name'))
+  form.eq(3).val(char.attr('last_name'))
+  form.eq(4).val(char.attr('born_on'))
+  form.eq(5).val(char.attr('location'))
+  form.eq(6).val(char.attr('movie'))
+  form.eq(7).val(char.attr('likes'))
+  form.eq(8).val(char.attr('img'))
+
+  // $('form').trigger('reset')
+  // onClearCharacters()
+}
+
 const onShowCharacter = (event) => {
   // console.log('here')
   event.preventDefault()
@@ -77,9 +101,11 @@ const onDeleteCharacter = (event) => {
 
 const addHandlers = () => {
   $('body').on('click', '.delete-character', onDeleteCharacter)
+  $('body').on('click', '.edit-character', onEditButton)
 }
 
 module.exports = {
+  onEditButton,
   onCreateCharacter,
   onUpdateCharacter,
   onIndexCharacters,
