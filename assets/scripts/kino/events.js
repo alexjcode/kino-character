@@ -87,8 +87,16 @@ const onUpdateCharacter = (event) => {
 }
 
 const onDeleteCharacter = (event) => {
-  event.preventDefault()
-  const id = $(event.target).data('id')
+  if (event) {
+    event.preventDefault()
+  }
+
+  let button = $(event.target)
+  if (button.attr('class') === 'btn-txt') {
+    // debugger
+    button = button.parent()
+  }
+  const id = button.data('id')
   onClearCharacters()
   api.deleteCharacter(id)
     .then(() => {

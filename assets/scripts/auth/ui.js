@@ -30,6 +30,7 @@ const signUpFailure = () => {
 const signInSuccessful = responseData => {
   // store user token
   store.user = responseData.user
+  // console.log(store.user)
   successMessage(`You signed in successfully!`)
 
   $('#sign-up').hide()
@@ -75,6 +76,7 @@ const signOutSuccessful = () => {
   $('#show-character').hide()
 
   $('#kino-divider').hide()
+  $('.content').html('')
 }
 
 const signOutFailure = () => {

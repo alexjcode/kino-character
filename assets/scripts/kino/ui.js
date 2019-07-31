@@ -44,11 +44,13 @@ const createCharacterSuccess = (data) => {
 
 const clearCharacters = () => {
   $('.content').empty()
+  $('#message').text('')
 }
 
 const failure = (error) => {
   // debugger
   console.error(error)
+  failMessage('invalid request', error)
 }
 
 module.exports = {
