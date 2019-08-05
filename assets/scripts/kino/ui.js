@@ -45,6 +45,7 @@ const createCharacterSuccess = (data) => {
 const clearCharacters = () => {
   $('.content').empty()
   $('#message').text('')
+  $('form').trigger('reset')
 }
 
 const failure = (error) => {

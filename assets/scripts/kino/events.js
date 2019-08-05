@@ -21,7 +21,7 @@ const onIndexCharacters = (event) => {
 const onEditButton = (event) => {
   event.preventDefault()
   let button = $(event.target)
-  if (button.attr('class') === 'btn-txt') {
+  if (button.attr('class') === 'btn-svg-e') {
     // debugger
     button = button.parent()
   }
@@ -92,7 +92,7 @@ const onDeleteCharacter = (event) => {
   }
 
   let button = $(event.target)
-  if (button.attr('class') === 'btn-txt') {
+  if (button.attr('class') === 'btn-svg-d') {
     // debugger
     button = button.parent()
   }
@@ -109,7 +109,9 @@ const onDeleteCharacter = (event) => {
 
 const addHandlers = () => {
   $('body').on('click', '.delete-character', onDeleteCharacter)
+  $('body').on('click', '.btn-svg-d', onDeleteCharacter)
   $('body').on('click', '.edit-character', onEditButton)
+  $('body').on('click', '.btn-svg-e', onEditButton)
 }
 
 module.exports = {

@@ -20,7 +20,7 @@
         {{/if}}
       </p>
     </div>
-    <div class="col-4 char-sub item-div">
+    <div class="col-3 col-md-4 char-sub item-div">
       <p>
         {{#if character.location}}
           Location: {{character.location}}
@@ -41,14 +41,21 @@
         {{/if}}
       </p>
     </div>
-    <div class="col-1 item-div item-delete" data-id="{{character.id}}">
+    <div class="col-2 col-md-1 item-div item-delete" data-id="{{character.id}}">
       <!-- <p class="x delete-character" data-id="{{character.id}}">X</p> -->
       <div class="btn-div col-5" first_name="{{character.first_name}}" last_name="{{character.last_name}}" movie="{{character.movie}}" location="{{character.location}}" born_on="{{character.born_on}}" likes="{{character.likes}}" img="{{character.img_working}}">
-        <button class="btn btn-dark edit-character" data-id="{{character.id}}"><span class="btn-txt" data-id="{{character.id}}">e</span></button>
+        <!-- <button class="btn btn-light edit-character" data-id="{{character.id}}"><span class="btn-txt" data-id="{{character.id}}">e</span></button> -->
+        <button class="btn btn-light edit-character" data-id="{{character.id}}">
+          <svg class="btn-svg-e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 87.38 87.42"><defs><style>.cls-1{fill:url(#Orange_Yellow);}.cls-2{fill:url(#Orange_Yellow-2);}.cls-3{fill:url(#Orange_Yellow-3);}.cls-4{fill:url(#Orange_Yellow-4);}</style><linearGradient id="Orange_Yellow" y1="45.09" x2="84.63" y2="45.09" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff33b"/><stop offset="0.04" stop-color="#fee72e"/><stop offset="0.12" stop-color="#fed51b"/><stop offset="0.2" stop-color="#fdca10"/><stop offset="0.28" stop-color="#fdc70c"/><stop offset="0.67" stop-color="#f3903f"/><stop offset="0.89" stop-color="#ed683c"/><stop offset="1" stop-color="#e93e3a"/></linearGradient><linearGradient id="Orange_Yellow-2" x1="36.98" y1="28.77" x2="79.92" y2="28.77" xlink:href="#Orange_Yellow"/><linearGradient id="Orange_Yellow-3" x1="68.78" y1="9.29" x2="87.38" y2="9.29" xlink:href="#Orange_Yellow"/><linearGradient id="Orange_Yellow-4" x1="29.51" y1="48.12" x2="48.47" y2="48.12" xlink:href="#Orange_Yellow"/></defs><title>edit2</title><path class="cls-1" d="M59.19,3c-.41.35-.84.68-1.23,1.05q-3.41,3.35-6.8,6.73a1.43,1.43,0,0,1-1.11.45c-11,0-22.06.1-33.08,0a8.71,8.71,0,0,0-8.57,9c0,.18,0,.36,0,.55q0,24.31,0,48.62a9.65,9.65,0,0,0,1.15,5.2A8.26,8.26,0,0,0,17,78.93H60.64c2.42,0,4.85,0,7.27,0a8.37,8.37,0,0,0,8.21-8.21q0-16.65,0-33.3a1.5,1.5,0,0,1,.46-1.16q3.83-3.82,7.64-7.67a4,4,0,0,1,.34-.27c0,.21,0,.35,0,.48q0,21.22-.06,42.44a24.26,24.26,0,0,1-.35,5.22c-1.13,5-4.37,8.27-9,10.2a10.67,10.67,0,0,1-4.15.78q-28.76,0-57.53,0a12.93,12.93,0,0,1-8.76-3.57A13.47,13.47,0,0,1,0,73.35C0,54.4,0,35.44,0,16.48c0-5.35,2.78-9.23,7.3-11.91a13,13,0,0,1,6.74-1.76l44.46-.06.52,0Z" transform="translate(0 0)"/><path class="cls-2" d="M66.56,7.26l13.36,13.6L50.3,50.27,37,36.67Z" transform="translate(0 0)"/><path class="cls-3" d="M82.15,18.58C77.7,14,73,9.85,68.78,5,70.21,3.64,71.59,2.24,73,.93a4.31,4.31,0,0,1,1.6-.79,2.68,2.68,0,0,1,2.64.53,63.14,63.14,0,0,1,6.12,5.76c1,1.05,2,2.11,3,3.16a3,3,0,0,1,.74,3.26,5.2,5.2,0,0,1-1,1.78C84.87,16,83.51,17.25,82.15,18.58Z" transform="translate(0 0)"/><path class="cls-4" d="M29.51,57.51l5.4-18.77L48.47,52.09Z" transform="translate(0 0)"/>
+          </svg>
+        </button>
       </div>
       <div class="btn-div col-1"></div>
       <div class="btn-div col-5">
-        <button class="btn btn-dark delete-character" data-id="{{character.id}}"><span class="btn-txt">x</span></button>
+        <button class="btn btn-light delete-character" data-id="{{character.id}}">
+          <svg class="btn-svg-d" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21 23.86"><defs><style>.cls-1{fill:url(#Orange_Yellow);}</style><linearGradient id="Orange_Yellow" y1="11.93" x2="21" y2="11.93" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff33b"/><stop offset="0.04" stop-color="#fee72e"/><stop offset="0.12" stop-color="#fed51b"/><stop offset="0.2" stop-color="#fdca10"/><stop offset="0.28" stop-color="#fdc70c"/><stop offset="0.67" stop-color="#f3903f"/><stop offset="0.89" stop-color="#ed683c"/><stop offset="1" stop-color="#e93e3a"/></linearGradient></defs><title>delete</title><path class="cls-1" d="M0,21.53a2.71,2.71,0,0,1,.75-1.85l6.6-7.92L1.23,4.49a3.35,3.35,0,0,1-.88-2A2.34,2.34,0,0,1,1.08.68,2.45,2.45,0,0,1,2.82,0,3.1,3.1,0,0,1,5.28,1.32l5.24,6.87,5.33-6.82A2.94,2.94,0,0,1,18.14,0a2.51,2.51,0,0,1,1.78.68,2.19,2.19,0,0,1,.73,1.65,2.78,2.78,0,0,1-.75,1.8l-6.3,7.53,6.52,7.7a3.36,3.36,0,0,1,.88,2,2.33,2.33,0,0,1-.73,1.78,2.45,2.45,0,0,1-1.74.68,3,3,0,0,1-2.47-1.36l-5.64-7.26L4.8,22.5a3.15,3.15,0,0,1-2.33,1.36,2.45,2.45,0,0,1-1.74-.68A2.18,2.18,0,0,1,0,21.53Z"/>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
